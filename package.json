@@ -1,0 +1,22 @@
+{
+  "name": "express-mongoose-base",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js",
+    "dev": "nodemon index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "express": "^4.17.2",
+    "jest": "^27.4.5",
+    "mongoose": "^6.1.4",
+    "nodemon": "^2.0.15",
+    "winston": "^3.3.3"
+  }
+}
