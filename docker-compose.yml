@@ -5,3 +5,5 @@ services:
     image: mongo
     ports: 
       - "27017:27017" 
+    environment:
+      - EDITOR='/usr/bin/vim'

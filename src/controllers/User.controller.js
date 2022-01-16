@@ -1,12 +1,17 @@
 const User = require('../models/User.model')
 const logger = require('../logger')
 
-exports.getAllUsers = async (req, res) => {
+exports.getAllUsers = async (req, res, next) => {
+  // try {
   data = await User.find({})
-  logger.log({
-    level: 'info',
-    type: 'GET',
-    message: data
-  })
+  const a = 1
+  a = 2
   res.status(200).send(data)
+  // } catch (error) {
+  // logger.log({
+  //   level: 'error',
+  //   type: 'GET',
+  //   message: error
+  // })
+  // }
 }

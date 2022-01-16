@@ -25,6 +25,27 @@ db.once("open", function() {
   console.log("Connected to the database");
 });
 
+// const logger = require('./src/logger')
+// const errorHandler = (err, req, res, next) => {
+//   // logger.log({
+//   //   level: 'error',
+//   //   type: req.method,
+//   //   message: err
+//   // })
+//   next()
+// }
+
+// app.use(function(err, req, res, next) {
+//   console.log("Hello This is some nice Error", err)
+//   next()
+// });
+
+app.error(function(err, req, res, next) {
+  console.log("Hello This is some nice Error", err)
+  next()
+});
+// app.use(errorHandler)
+
 // Routers
 const UserRouter = require('./src/routers/User.router')
 app.use('/users', UserRouter)
